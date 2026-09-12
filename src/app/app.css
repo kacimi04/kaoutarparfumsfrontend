@@ -1,0 +1,135 @@
+:host {
+	--bg-start: #f6efe6;
+	--bg-end: #f8d8b5;
+	--panel: #fffdf9;
+	--text: #22201f;
+	--muted: #6f6359;
+	--accent: #9f2f20;
+	--accent-soft: #f2dfd8;
+	--border: #eed7c9;
+	display: block;
+	min-height: 100dvh;
+	color: var(--text);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page {
+	min-height: 100dvh;
+	padding: 2rem clamp(1rem, 3vw, 3rem);
+	background: radial-gradient(circle at top right, #ffe8c9 0%, transparent 45%),
+		linear-gradient(140deg, var(--bg-start), var(--bg-end));
+}
+
+.hero {
+	margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--muted);
+	margin-bottom: 0.5rem;
+}
+
+h1 {
+	margin: 0;
+	font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.subtitle {
+	max-width: 65ch;
+	color: var(--muted);
+}
+
+.panel {
+	background: var(--panel);
+	border: 1px solid var(--border);
+	border-radius: 1rem;
+	padding: 1rem;
+	box-shadow: 0 8px 26px rgba(80, 42, 30, 0.08);
+}
+
+.controls {
+	margin-bottom: 1rem;
+}
+
+.controls-row {
+	display: flex;
+	gap: 0.75rem;
+	margin-top: 0.5rem;
+}
+
+input {
+	flex: 1;
+	border: 1px solid var(--border);
+	border-radius: 0.6rem;
+	padding: 0.55rem 0.7rem;
+	font-size: 1rem;
+}
+
+button {
+	border: 0;
+	border-radius: 0.6rem;
+	background: var(--accent);
+	color: #fff;
+	padding: 0.55rem 0.9rem;
+	cursor: pointer;
+}
+
+.layout {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+.perfume-list,
+.stores-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 0.6rem;
+}
+
+.perfume-list button {
+	width: 100%;
+	text-align: left;
+	background: var(--accent-soft);
+	color: var(--text);
+	display: grid;
+	gap: 0.2rem;
+}
+
+.perfume-brand {
+	font-weight: 700;
+}
+
+.perfume-ref,
+.perfume-price,
+.muted {
+	color: var(--muted);
+}
+
+.details h3 {
+	margin-top: 1rem;
+}
+
+.stores-list li {
+	border: 1px solid var(--border);
+	border-radius: 0.7rem;
+	padding: 0.55rem;
+}
+
+.error {
+	color: #8b1f17;
+	background: #fce8e6;
+	border: 1px solid #f4c3bc;
+	border-radius: 0.6rem;
+	padding: 0.7rem;
+}
+
+@media (max-width: 900px) {
+	.layout {
+		grid-template-columns: 1fr;
+	}
+}
